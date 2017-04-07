@@ -28,7 +28,7 @@ PACKAGE_VERSION?=9.0.0
 FUEL_LIBRARY_VERSION?=9.0
 
 # Artifacts names
-ISO_NAME?=fuel-$(PRODUCT_VERSION)
+ISO_NAME?=cloudos-$(PRODUCT_VERSION)
 
 # Where we put artifacts
 ISO_PATH:=$(ARTS_DIR)/$(ISO_NAME).iso
@@ -64,33 +64,33 @@ DENY_RPM_DOWNGRADE?=1
 NO_UI_OPTIMIZE:=0
 
 # Repos and versions
-FUELLIB_COMMIT?=stable/mitaka
-NAILGUN_COMMIT?=stable/mitaka
+FUELLIB_COMMIT?=xcloud/mitaka
+NAILGUN_COMMIT?=xcloud/mitaka
 PYTHON_FUELCLIENT_COMMIT?=stable/mitaka
 FUEL_AGENT_COMMIT?=stable/mitaka
 FUEL_NAILGUN_AGENT_COMMIT?=stable/mitaka
-ASTUTE_COMMIT?=stable/mitaka
+ASTUTE_COMMIT?=xcloud/mitaka
 OSTF_COMMIT?=stable/mitaka
 FUEL_MIRROR_COMMIT?=stable/mitaka
-FUELMENU_COMMIT?=stable/mitaka
+FUELMENU_COMMIT?=xcloud/mitaka
 SHOTGUN_COMMIT?=stable/mitaka
 NETWORKCHECKER_COMMIT?=stable/mitaka
 FUELUPGRADE_COMMIT?=stable/mitaka
-FUEL_UI_COMMIT?=stable/mitaka
+FUEL_UI_COMMIT?=xcloud/mitaka
 
-FUELLIB_REPO?=https://github.com/openstack/fuel-library.git
-NAILGUN_REPO?=https://github.com/openstack/fuel-web.git
-PYTHON_FUELCLIENT_REPO?=https://github.com/openstack/python-fuelclient.git
-FUEL_AGENT_REPO?=https://github.com/openstack/fuel-agent.git
-FUEL_NAILGUN_AGENT_REPO?=https://github.com/openstack/fuel-nailgun-agent.git
-ASTUTE_REPO?=https://github.com/openstack/fuel-astute.git
-OSTF_REPO?=https://github.com/openstack/fuel-ostf.git
-FUEL_MIRROR_REPO?=https://github.com/openstack/fuel-mirror.git
-FUELMENU_REPO?=https://github.com/openstack/fuel-menu.git
-SHOTGUN_REPO?=https://github.com/openstack/shotgun.git
-NETWORKCHECKER_REPO?=https://github.com/openstack/network-checker.git
-FUELUPGRADE_REPO?=https://github.com/openstack/fuel-upgrade.git
-FUEL_UI_REPO?=https://github.com/openstack/fuel-ui.git
+FUELLIB_REPO?=http://git.fx-dev.com/fuel-infra/fuel-library 
+NAILGUN_REPO?=http://git.fx-dev.com/fuel-infra/fuel-web 
+PYTHON_FUELCLIENT_REPO?=http://git.fx-dev.com/fuel-infra/python-fuelclient 
+FUEL_AGENT_REPO?=http://git.fx-dev.com/fuel-infra/fuel-agent 
+FUEL_NAILGUN_AGENT_REPO?=http://git.fx-dev.com/fuel-infra/fuel-nailgun-agent 
+ASTUTE_REPO?=http://git.fx-dev.com/fuel-infra/fuel-astute 
+OSTF_REPO?=http://git.fx-dev.com/fuel-infra/fuel-ostf 
+FUEL_MIRROR_REPO?=http://git.fx-dev.com/fuel-infra/fuel-mirror 
+FUELMENU_REPO?=http://git.fx-dev.com/fuel-infra/fuel-menu 
+SHOTGUN_REPO?=http://git.fx-dev.com/fuel-infra/shotgun 
+NETWORKCHECKER_REPO?=http://git.fx-dev.com/fuel-infra/network-checker 
+FUELUPGRADE_REPO?=http://git.fx-dev.com/fuel-infra/fuel-upgrade 
+FUEL_UI_REPO?=http://git.fx-dev.com/fuel-infra/fuel-ui
 
 # Gerrit URLs and commits
 FUELLIB_GERRIT_URL?=https://review.openstack.org/openstack/fuel-library
@@ -149,18 +149,23 @@ endif
 # Example: YUM_REPOS?=official epel => yum_repo_official and yum_repo_epel
 # will be used.
 YUM_REPOS?=official extras fuel
-MIRROR_CENTOS?=http://mirror.centos.org/centos/$(CENTOS_MAJOR)
+MIRROR_CENTOS?=http://mirrors.aliyun.com/centos/$(CENTOS_MAJOR)
 MIRROR_CENTOS_KERNEL?=$(MIRROR_CENTOS)
+
 SANDBOX_MIRROR_CENTOS_UPSTREAM?=$(MIRROR_CENTOS)
 SANDBOX_MIRROR_EPEL?=http://mirror.yandex.ru/epel
+
 MIRROR_UBUNTU_METHOD?=http
 MIRROR_UBUNTU?=mirror.fuel-infra.org
 MIRROR_UBUNTU_ROOT?=/pkgs/ubuntu/
 MIRROR_UBUNTU_SUITE?=$(UBUNTU_RELEASE)
 MIRROR_UBUNTU_SECTION?=main universe multiverse restricted
+
 MIRROR_MOS_UBUNTU_METHOD?=http
-MIRROR_MOS_UBUNTU?=mirror.fuel-infra.org
+MIRROR_MOS_UBUNTU?=mirror.fuel-infra.org 
+# eg: /mos-repos/ubunut/9.0
 MIRROR_MOS_UBUNTU_ROOT?=/mos-repos/ubuntu/$(PRODUCT_VERSION)
+# eg: mos9.0
 MIRROR_MOS_UBUNTU_SUITE?=$(PRODUCT_NAME)$(PRODUCT_VERSION)
 MIRROR_MOS_UBUNTU_SECTION?=main restricted
 

@@ -24,3 +24,5 @@ lock
 
 Nailgun.egg-info
 repomd.xml*
+
+debmirror*

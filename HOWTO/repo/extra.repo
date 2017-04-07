@@ -1,0 +1,9 @@
+
+[proposed]
+name = Repo "proposed"
+baseurl = http://mirror.fuel-infra.org/mos-repos/centos/mos9.0-centos7/snapshots/proposed-latest/x86_64/
+gpgcheck = 0
+enabled = 1
+priority = 10
+exclude=*debuginfo*
+

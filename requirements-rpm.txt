@@ -136,6 +136,7 @@ python-kombu
 python-ldappool
 python-logutils
 python-lxml
+python-lockfile
 python-mako
 python-markdown
 python-markupsafe

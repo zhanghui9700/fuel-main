@@ -1,0 +1,70 @@
+
+[base]
+name=CentOS-7 - Base
+#mirrorlist=http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=os
+baseurl=http://mirrors.aliyun.com/centos/7/os/x86_64
+gpgcheck=0
+enabled=1
+exclude=*i686 syslinux*
+priority=90
+
+[updates]
+name=CentOS-7 - Updates
+#mirrorlist=http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=updates
+baseurl=http://mirrors.aliyun.com/centos/7/updates/x86_64
+gpgcheck=0
+enabled=1
+exclude=*i686 syslinux*
+priority=90
+
+[base_i686_whitelisted]
+name=CentOS-7 - Base
+#mirrorlist=http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=os
+baseurl=http://mirrors.aliyun.com/centos/7/os/x86_64
+gpgcheck=0
+enabled=1
+includepkgs=syslinux*
+priority=90
+
+[updates_i686_whitelisted]
+name=CentOS-7 - Updates
+#mirrorlist=http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=updates
+baseurl=http://mirrors.aliyun.com/centos/7/updates/x86_64
+gpgcheck=0
+enabled=1
+includepkgs=syslinux*
+priority=90
+ 
+[extras]
+name=CentOS-7 - Extras
+#mirrorlist=http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=extras
+baseurl=http://mirrors.aliyun.com/centos/7/extras/x86_64
+gpgcheck=0
+enabled=1
+exclude=*i686
+priority=90
+
+[centosplus]
+name=CentOS-7 - Plus
+#mirrorlist=http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=centosplus
+baseurl=http://mirrors.aliyun.com/centos/7/centosplus/x86_64
+gpgcheck=0
+enabled=0
+priority=90
+
+[contrib]
+name=CentOS-7 - Contrib
+#mirrorlist=http://mirrorlist.centos.org/?release=7&arch=x86_64&repo=contrib
+baseurl=http://mirrors.aliyun.com/centos/7/contrib/x86_64
+gpgcheck=0
+enabled=0
+priority=90
+ 
+[fuel]
+name=Fuel Packages
+baseurl=http://mirror.seed-us1.fuel-infra.org/mos-repos/centos/mos9.0-centos7/os/x86_64/
+gpgcheck=0
+enabled=1
+priority=20
+exclude=*debuginfo*
+

@@ -367,9 +367,10 @@ else
   fi
 fi
 
+# Disable online extra-repo --by zhanghui
 # Enable online base MOS repos (security, updates) if we run an ISO installation
 [ -f /etc/fuel_build_id ] && \
-  yum-config-manager --enable mos${FUEL_RELEASE}-security mos${FUEL_RELEASE}-updates --save
+  yum-config-manager --disable mos${FUEL_RELEASE}-security mos${FUEL_RELEASE}-updates --save
 
 if [ ! -f "${ASTUTE_YAML}" ]; then
   echo ${fuelmenu_fail_message}
@@ -423,17 +424,17 @@ for ip in `ip -o -4 addr show | awk '/e[nt][hopsx]/ { split($4, arr, /\//); prin
 done
 cat > /etc/issue <<EOF
 #########################################
-#       Welcome to the Fuel server      #
+#     Welcome to the xCloudOS server    #
 #########################################
 Server is running on \m platform
 
-Fuel UI is available on:
+xCloudOS UI is available on:
 $ipstr
 Default administrator login:    root
 Default administrator password: r00tme
 
-Default Fuel UI login: admin
-Default Fuel UI password: admin
+Default xCloudOS UI login: admin
+Default xCloudOS UI password: admin
 
 Please change root password on first login.
 

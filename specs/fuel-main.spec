@@ -95,3 +95,15 @@ This packages provides script to deploy Fuel components.
 %defattr(-,root,root)
 %{_sbindir}/bootstrap_admin_node.sh
 %{_sbindir}/fix_default_repos.py
+%changelog
+* Thu Apr 13 2017 zhanghui9700 <zhanghui9700@gmail.com> - 9.0.0-1.mos6359
+- 98f76e7 custom build xcloudos iso
+- 4e4d96c Add holdback and hotfix repos into custom isos
+- 642e1c0 Use mos and proposed repos during centos install
+- 363fff0 Modify default repos for fuel and fuelmenu
+- cbb8fa3 Set default EXTRA_RPM_REPOS to use proposed repo
+- 7c45cbe Make sure the ISO tracks the latest merged code
+- 55d7236 Merge "Revert "Make sure the ISO tracks the latest merged code"" into stable/mitaka
+- c3f8090 Revert "Make sure the ISO tracks the latest merged code"
+- ef5acbb Merge "Allow to pass RPM repos to build-sandbox" into stable/mitaka
+- 9e8ae96 Allow to pass RPM repos to build-sandbox

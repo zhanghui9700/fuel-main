@@ -1,0 +1,5 @@
+[epel]
+name=epel mirror
+baseurl=http://mirror.yandex.ru/epel/7/x86_64/
+gpgcheck=0
+priority=3
